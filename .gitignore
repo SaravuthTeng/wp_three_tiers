@@ -1,0 +1,17 @@
+# Local .terraform directories
+**/.terraform/*
+
+# .tfstate files (They contain plain-text secrets; do NOT commit)
+*.tfstate
+*.tfstate.*
+
+# Crash log files
+crash.*
+crash.log
+
+# Variables files containing secret strings
+*.tfvars
+*.tfvars.json
+override.tf
+override.tf.json
+
