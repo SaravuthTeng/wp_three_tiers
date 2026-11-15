@@ -18,4 +18,12 @@ variable "vpc_cidr" {
 variable "environment" {
   type        = string
   default     = "dev" 
+  description = "The setup environment"
+}
+
+### Port for wordpress 
+variable "app_port" {
+  description = "Port the WordPress application listens on (e.g., 80 or 8080)"
+  type        = number
+  default     = 80
 }
