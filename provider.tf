@@ -5,8 +5,8 @@ provider "aws" {
   default_tags {
     tags = {
       Environment = "devops"
-      ManagedBy   = "Terraform"
-      Owner       = "teng saravuth"
+      ManagedBy   = "terraform"
+      Owner       = "saravuth"
     }
   }
 }
