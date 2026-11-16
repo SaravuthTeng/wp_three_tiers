@@ -48,12 +48,19 @@ resource "aws_subnet" "private_subnet" {
 resource "aws_subnet" "isolated_subnet" {
   vpc_id            = aws_vpc.vpc_three_tier.id
   cidr_block        = cidrsubnet(var.vpc_cidr, 8, 21)
-
+  availability_zone = "${var.aws_region}a"
   tags = {
     Name = "${var.environment}-isolated-subnet"
   }
 }
-
+resource "aws_subnet" "isolated_subnet_az2" {
+  vpc_id            = aws_vpc.vpc_three_tier.id
+  cidr_block        = cidrsubnet(var.vpc_cidr, 8, 22)
+  availability_zone = "${var.aws_region}b"
+  tags = {
+    Name = "${var.environment}-isolated-subnet"
+  }
+}
 # ==========================================
 # 3. NAT GATEWAYS & ROUTE TABLES
 # ==========================================

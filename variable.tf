@@ -27,3 +27,9 @@ variable "app_port" {
   type        = number
   default     = 80
 }
+variable "db_password" {
+  description = "WP admin password"
+  type        = string
+  sensitive   = true
+#  default     = "admin"  # don't use password here
+}
