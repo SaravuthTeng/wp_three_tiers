@@ -33,3 +33,13 @@ variable "db_password" {
   sensitive   = true
 #  default     = "admin"  # don't use password here
 }
+variable "db_name" {
+  description = "WP database name"
+  type        = string
+  sensitive   = true
+}
+variable "db_username" {
+  description = "WP username"
+  type        = string
+  sensitive   = true
+}
